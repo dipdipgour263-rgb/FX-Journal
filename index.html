@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FX JOURNAL MASTER</title>
+<meta name="theme-color" content="#081a2e">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui}
+body{background:#081a2e;color:#fff;min-height:100vh;padding-bottom:80px}
+.h{padding:18px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:900;font-size:20px} .logo span{color:#00e676}
+.card{background:#112240;border-radius:16px;padding:16px;margin:12px;border:1px solid #1e3a5f}
+.btn{background:#00e676;color:#081a2e;border:0;padding:14px;width:100%;border-radius:12px;font-weight:800;margin-top:10px}
+.input{width:100%;background:#0f2744;border:1px solid #1e3a5f;color:#fff;padding:12px;border-radius:10px;margin:6px 0}
+.nav{position:fixed;bottom:0;left:0;right:0;background:#0a1e35;display:flex;justify-content:space-around;padding:12px 0;border-top:1px solid #1e3a5f}
+.g{color:#00e676} .r{color:#ff5252}
+</style>
+</head>
+<body>
+<div class="h"><div class="logo">FX <span>JOURNAL</span> MASTER</div><div class="g">PRO</div></div>
+
+<div class="card">
+<div>Balance <span class="g" style="float:right">+2.4%</span></div>
+<h1 style="font-size:28px;margin-top:6px">$12,845.50</h1>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:15px">
+<div><small style="color:#94a3b8">TOTAL P/L</small><br><b class="g">+$1,245</b></div>
+<div><small style="color:#94a3b8">WIN RATE</small><br><b>68.5%</b></div>
+<div><small style="color:#94a3b8">TOTAL TRADES</small><br><b>124</b></div>
+<div><small style="color:#94a3b8">PROFIT FACTOR</small><br><b>2.15</b></div>
+</div>
+</div>
+
+<div class="card">
+<h3>➕ New Trade</h3>
+<select class="input"><option>EUR/USD</option><option>XAU/USD</option><option>GBP/USD</option><option>BTC/USD</option></select>
+<div style="display:flex;gap:8px"><button class="btn" style="background:#112240;color:#00e676;border:1px solid #00e676">BUY</button><button class="btn" style="background:#112240;color:#ff5252;border:1px solid #ff5252">SELL</button></div>
+<input class="input" placeholder="Entry Price">
+<input class="input" placeholder="Stop Loss">
+<input class="input" placeholder="Take Profit">
+<input class="input" placeholder="Lot Size">
+<button class="btn" onclick="localStorage.setItem('trade','done');alert('Trade Saved!')">SAVE TRADE</button>
+</div>
+
+<div class="card">
+<h3>📜 Recent Trades</h3>
+<div style="padding:10px 0;border-bottom:1px solid #1e3a5f;display:flex;justify-content:space-between"><span>EUR/USD BUY +$45</span><b class="g">WIN</b></div>
+<div style="padding:10px 0;border-bottom:1px solid #1e3a5f;display:flex;justify-content:space-between"><span>GBP/USD SELL -$20</span><b class="r">LOSS</b></div>
+<div style="padding:10px 0;display:flex;justify-content:space-between"><span>XAU/USD BUY +$120</span><b class="g">WIN</b></div>
+</div>
+
+<div class="nav"><div class="g">●<br>DASH</div><div>◐<br>HISTORY</div><div>◑<br>ANALYTICS</div><div>▭<br>CALENDAR</div><div>≡<br>MORE</div></div>
+</body>
+  </html>
